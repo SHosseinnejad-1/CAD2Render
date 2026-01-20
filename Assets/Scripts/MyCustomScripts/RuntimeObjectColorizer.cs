@@ -25,7 +25,7 @@ public class RuntimeObjectColorizer : MonoBehaviour
 
     void Update()
     {
-        foreach (GameObject obj in FindObjectsOfType<GameObject>())
+        foreach (GameObject obj in FindObjectsByType<GameObject>(FindObjectsSortMode.None))
         {
             if (seen.Contains(obj)) continue;
             if (!obj.activeInHierarchy) continue;
